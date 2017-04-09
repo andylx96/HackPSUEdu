@@ -13,8 +13,13 @@ public class App {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws Throwable {
+
+        MainMenuModel model = new MainMenuModel();
+        MainMenuFrame view = new MainMenuFrame(model);
+        MainMenuController controller = new MainMenuController(model, view);
+
+        view.setVisible(true);
     }
     
 }
