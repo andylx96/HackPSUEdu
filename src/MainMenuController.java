@@ -56,9 +56,9 @@ public class MainMenuController {
         public void actionPerformed(ActionEvent e) {
             {
 
-                String username = n_frame.getMain_panel().getLog_view().getUsernameCombo().getSelectedItem().toString();
-                String password = n_model.getAccounts().get(1).get(n_frame.getMain_panel().getLog_view().getUsernameCombo().getSelectedIndex()).toString();
-                if (n_frame.getMain_panel().getLog_view().getUsernameCombo().getSelectedItem().equals(username) && n_frame.getMain_panel().getLog_view().getPassword().getText().equals(password)) {
+                String username = n_frame.getMain_panel().getLog_view().getUsername().getText();
+                String password = "Password";
+                if (n_frame.getMain_panel().getLog_view().getUsername().getText().equals(username) && n_frame.getMain_panel().getLog_view().getPassword().getText().equals(password)) {
 
                     n_frame.switchToMainView(main_view);
 
@@ -85,7 +85,6 @@ public class MainMenuController {
 
                 n_model.getAccounts().get(0).add(tempUsername);
                 n_model.getAccounts().get(1).add(tempPassword);
-                n_frame.getMain_panel().getLog_view().getUsernameCombo().addItem(tempUsername);
             }
 
             fin.close();
